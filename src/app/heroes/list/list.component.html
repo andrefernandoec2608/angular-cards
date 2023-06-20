@@ -1,0 +1,19 @@
+<p>list works!</p>
+{{getTexto()}}
+
+<div *ngIf="friendsList.length > 0;else labelNoAmigos">
+  <h5>Lista de amigos llena</h5>
+</div>
+<ng-template #labelNoAmigos>
+  <h5>Lista de amigos vacia</h5>
+</ng-template>
+
+<button class="btn btn-outline-danger" (click) = "removerUltimoAmigo()"
+*ngIf="friendsList.length > 0">
+  Borrar ultimo amigo
+</button>
+<ul class="mt-2 list-group">
+  <li *ngFor="let item of friendsList" class="list-group-item">
+    {{item}}
+  </li>
+</ul>
