@@ -1,1 +1,10 @@
 <h1>DBZ Main Page</h1>
+<hr>
+<div class="row">
+  <div class="col">
+    <app-dbz-list  (onItemEliminado) = 'eliminarItem($event)' [itemList] = "getListado()"></app-dbz-list>
+  </div>
+  <div class="col">
+    <app-dbz-character (onNewItem) = 'anadirNuevoItem($event)'></app-dbz-character>
+  </div>
+</div>
